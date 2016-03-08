@@ -10,7 +10,7 @@ import android.widget.ImageView;
 /**
  * Created by Cyberbug on 30/11/2015.
  */
-public class Ficha extends Fragment {
+public class Profile extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

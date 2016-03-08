@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Seleccionar"
+            android:name=".Select"
             android:label="@string/info_selec" >
         </activity>
         <activity

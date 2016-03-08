@@ -7,10 +7,8 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnKeyListener;
 import android.content.Intent;
 import android.widget.EditText;
-import android.widget.Toast;
 
 
 public class Login extends ActionBarActivity {
@@ -60,7 +58,7 @@ public class Login extends ActionBarActivity {
     {
 
 
-            Intent intent = new Intent(this, Seleccionar.class);
+            Intent intent = new Intent(this, Select.class);
             startActivity(intent);
 
 

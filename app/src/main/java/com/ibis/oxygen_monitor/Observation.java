@@ -16,7 +16,7 @@ import com.jjoe64.graphview.series.LineGraphSeries;
  * Aquí se crearán los gráficos de observación del paciente. Dichos datos se pedirán también conforme el estándar HL7 FHIR.
  * Habrá un filtro por fecha para que la observación sea más precisa
  */
-public class Observacion extends Fragment {
+public class Observation extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

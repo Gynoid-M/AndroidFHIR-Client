@@ -10,7 +10,7 @@ import java.util.Date;
  * Sin embargo no se almacenarán todos los datos de la observación, ya que no es necesraio. Simplemente el valor y la fecha
  */
 
-public class RecursoObservacion {
+public class ObservationResource {
 
     private ArrayList<Integer> spo2;
     private ArrayList<Date> fecha;

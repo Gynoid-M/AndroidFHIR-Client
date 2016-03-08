@@ -16,7 +16,7 @@ import android.widget.ImageView;
  *
  * El usuario tendrá acceso al historial de los pacientes. Algo que consumiremos vía HL7 FHIR.
  */
-public class Historial extends Fragment {
+public class History extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

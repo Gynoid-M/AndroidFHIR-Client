@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background_floating_material_dark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="30px"
+    android:orientation="horizontal"
+
+    tools:context=".Login">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top">
+        <TableLayout
+            android:layout_gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+        <TableRow >
+        <TextView
+         android:text="@string/user_label"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+            android:layout_marginBottom="25dip"
+            android:layout_marginTop="25dip"
+
+         android:textSize="24.5sp"
+            android:textColor="@color/primary_material_light"
+            />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+        <EditText
+            android:id="@+id/user_entry"
+            android:singleLine="true"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/primary_material_light"
+            android:focusable = "true"
+            android:imeOptions="actionNext"
+
+           />
+            </LinearLayout>
+        </TableRow>
+         <TableRow>
+             <TextView
+
+            android:text="@string/pass_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="25dip"
+            android:layout_marginTop="25dip"
+            android:textSize="24.5sp"
+            android:textColor="@color/primary_material_light"
+
+            />
+             <LinearLayout
+                 android:orientation="vertical"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center">
+        <EditText
+            android:id="@+id/pass_entry"
+            android:singleLine="true"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:password="true"
+            android:textColor="@color/primary_material_light"
+            android:focusable = "true"
+            android:imeOptions="actionDone"
+
+            />
+             </LinearLayout>
+         </TableRow>
+
+        </TableLayout>
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="200px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dip"
+            android:layout_gravity="center"
+            android:focusable = "true"
+            android:text="Entra"
+            android:textSize="17.5sp"
+            android:onClick="loginUser"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

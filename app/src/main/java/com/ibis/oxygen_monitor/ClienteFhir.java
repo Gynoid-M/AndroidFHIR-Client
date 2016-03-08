@@ -5,6 +5,7 @@ package com.ibis.oxygen_monitor;
  */
 /*
 Aquí se efectuarán todas las operaciones de petición y serialización, necesarias para poder trabajar
+
  */
 public class ClienteFhir {
 }

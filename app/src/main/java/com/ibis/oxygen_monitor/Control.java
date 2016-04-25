@@ -57,7 +57,7 @@ public class Control extends ActionBarActivity
                 fragment = new History();
                 break;
             case 2:
-                fragment = new Observation();
+                fragment = new ObservationGraph();
                 break;
         }
 

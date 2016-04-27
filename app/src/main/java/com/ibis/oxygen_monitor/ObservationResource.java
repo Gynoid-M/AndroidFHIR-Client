@@ -30,11 +30,11 @@ import java.util.Date;
  * Sin embargo no se almacenarán todos los datos de la observación, ya que no es necesraio. Simplemente el valor y la fecha
  */
 
-public class ObservationResource {
+public class ObservationResource extends Resource {
 
     private ArrayList<Integer> spo2 = new ArrayList<>();
     private ArrayList<Date> fecha = new ArrayList<>();
-    private String request = new String();
+
 
     public ArrayList<Integer> getSpo2 (){
         return spo2;
@@ -42,38 +42,9 @@ public class ObservationResource {
     public ArrayList<Date> getFecha (){
         return fecha;
     }
+
     public void requestObservation(){
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
-        BufferedReader in = null;
-        try {
-
-            HttpClient client = new DefaultHttpClient();
-            HttpGet request = new HttpGet();
-            // request.setURI(new URI("http://"+url+"/"));
-            request.setURI(new URI("http://192.168.1.12:3000/fhircontroller"));
-            HttpResponse response = client.execute(request);
-            in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-            StringBuffer sb = new StringBuffer("");
-            String line = "";
-           // String NL = System.getProperty("line.separator");
-            while ((line = in.readLine()) != null) {
-                sb.append(line);
-            }
-            in.close();
-             this.request = sb.toString();
-        } catch (IOException ioex){
-            ioex.printStackTrace();
-        }
-        catch (URISyntaxException uriex){
-            uriex.printStackTrace();
-        }
-
-        serializeRequest();
-
-    }
-
-    public void serializeRequest(){
+     String request = super.request("Observation");
         try {
 
             JSONArray jsonRootArray = new JSONArray(request);

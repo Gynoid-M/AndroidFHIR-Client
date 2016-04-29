@@ -29,7 +29,7 @@ public class Select extends Activity {
         //Se pretende usar conexión con el servidor del hospital en el futuro, una vez terminado el diseño perliminar
         pacientes = new ArrayList<String>();
         pacientes.add("Manuel Perez");
-        pacientes.add("Samuel Zubizarreta");
+        pacientes.add("Juan Jiménez");
 
         // Create an empty adapter we will use to display the loaded data.
         // We pass null for the cursor, then update it in onLoadFinished()

@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * Created by Cyberbug on 30/11/2015.
@@ -21,11 +22,11 @@ public class History extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_historial, container, false);
-        FHIRClient fhir = new FHIRClient();
-        fhir.requestObservationValues().get(0).toString();
         return rootView;
 
+
     }
+
 
 
 }

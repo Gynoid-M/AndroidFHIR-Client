@@ -28,6 +28,16 @@
         android:text="Medium Text"
         android:id="@+id/edadPaciente"
         android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/nombrePaciente"
-        android:layout_alignEnd="@+id/nombrePaciente" />
+        android:layout_toLeftOf="@+id/imageView"
+        android:layout_toStartOf="@+id/imageView" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/contacto"
+        android:layout_marginTop="76dp"
+        android:layout_below="@+id/edadPaciente"
+        android:layout_alignLeft="@+id/edadPaciente"
+        android:layout_alignStart="@+id/edadPaciente" />
 </RelativeLayout>

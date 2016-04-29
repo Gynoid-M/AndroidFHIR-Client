@@ -1,6 +1,8 @@
 package com.ibis.oxygen_monitor;
 
 
+import com.ibis.oxygen_monitor.Exceptions.FhirServerException;
+
 import java.util.ArrayList;
 
 /**
@@ -13,7 +15,11 @@ public class FHIRClient {
     ObservationResource obResource = new ObservationResource();
 
     public ArrayList<Integer> requestObservationValues(){
-        obResource.requestObservation();
+        try {
+            obResource.requestObservation();
+        } catch (FhirServerException e) {
+            e.printStackTrace();
+        }
         return obResource.getSpo2();
     }
 

@@ -1,25 +1,10 @@
 package com.ibis.oxygen_monitor;
 
-import android.os.StrictMode;
+import com.ibis.oxygen_monitor.Exceptions.FhirServerException;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.Volley;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONTokener;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -43,7 +28,7 @@ public class ObservationResource extends Resource {
         return fecha;
     }
 
-    public void requestObservation(){
+    public void requestObservation() throws FhirServerException{
      String request = super.request("Observation");
         try {
 
@@ -57,6 +42,9 @@ public class ObservationResource extends Resource {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
+        if(spo2.size() == 0)
+        {
+            throw new FhirServerException("No se ha podido recoger los datos");
+        }
     }
 }

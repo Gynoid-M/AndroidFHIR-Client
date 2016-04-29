@@ -4,4 +4,48 @@
     android:layout_height="match_parent">
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Afecciones"
+        android:id="@+id/afeccionesTitle"
+        android:layout_marginTop="82dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="54dp"
+        android:layout_marginStart="54dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Bronquitis crónica"
+        android:id="@+id/afeccionesText"
+        android:layout_below="@+id/afeccionesTitle"
+        android:layout_alignLeft="@+id/afeccionesTitle"
+        android:layout_alignStart="@+id/afeccionesTitle"
+        android:layout_marginTop="66dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Alergias"
+        android:id="@+id/alergiasTitle"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/afeccionesText"
+        android:layout_alignStart="@+id/afeccionesText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="No hay alergias preescritas"
+        android:id="@+id/alergiasText"
+        android:layout_marginTop="79dp"
+        android:layout_below="@+id/alergiasTitle"
+        android:layout_alignLeft="@+id/alergiasTitle"
+        android:layout_alignStart="@+id/alergiasTitle" />
 </RelativeLayout>

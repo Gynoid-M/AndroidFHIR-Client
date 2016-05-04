@@ -12,15 +12,16 @@ import java.util.ArrayList;
 This is the Business Entity, where we manage the operations which are related with request and JSON serialization.
  */
 public class FHIRClient {
-    ObservationResource obResource = new ObservationResource();
+    ResourceFactory resourceFactory = new ResourceFactory();
 
     public ArrayList<Integer> requestObservationValues(){
+        Resource resource = resourceFactory.getResource("Observation");
         try {
-            obResource.requestObservation();
+            resource.deserializeJSON();
         } catch (FhirServerException e) {
             e.printStackTrace();
         }
-        return obResource.getSpo2();
+        return resource.getValues("");
     }
 
 

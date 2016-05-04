@@ -13,16 +13,18 @@ import android.widget.EditText;
 
 public class Login extends ActionBarActivity {
 
-   public EditText username;
-    public EditText password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
-        username = (EditText)findViewById(R.id.user_entry);
-        password = (EditText)findViewById(R.id.pass_entry);
+        EditText username = (EditText)findViewById(R.id.user_entry);
+        EditText password = (EditText)findViewById(R.id.pass_entry);
+        /*
+        Request al servidor para validr
+         */
 
 
 

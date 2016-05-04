@@ -3,6 +3,7 @@ package com.ibis.oxygen_monitor;
 import android.app.Fragment;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,4 +54,5 @@ public class ObservationGraph extends Fragment {
         return rootView;
 
     }
+
 }

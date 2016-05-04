@@ -15,24 +15,21 @@ import java.util.Date;
  * Sin embargo no se almacenarán todos los datos de la observación, ya que no es necesraio. Simplemente el valor y la fecha
  */
 
-public class ObservationResource extends Resource {
+public class ObservationResource implements Resource {
 
     private ArrayList<Integer> spo2 = new ArrayList<>();
-    private ArrayList<Date> fecha = new ArrayList<>();
 
-
-    public ArrayList<Integer> getSpo2 (){
+    @Override
+    public ArrayList getValues(String extension){
         return spo2;
     }
-    public ArrayList<Date> getFecha (){
-        return fecha;
-    }
-
-    public void requestObservation() throws FhirServerException{
-     String request = super.request("Observation");
+    @Override
+    public void deserializeJSON()throws FhirServerException{
+        Request request = new Request();
+        String request_chain=request.request("Observation");
         try {
 
-            JSONArray jsonRootArray = new JSONArray(request);
+            JSONArray jsonRootArray = new JSONArray(request_chain);
             for(int i = 0; i<jsonRootArray.length(); i++) {
                 JSONObject jsonObservation = jsonRootArray.getJSONObject(i);
 

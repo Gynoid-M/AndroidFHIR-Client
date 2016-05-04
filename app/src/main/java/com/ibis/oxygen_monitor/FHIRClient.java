@@ -21,7 +21,7 @@ public class FHIRClient {
         } catch (FhirServerException e) {
             e.printStackTrace();
         }
-        return resource.getValues("");
+        return resource.getValues();
     }
 
 

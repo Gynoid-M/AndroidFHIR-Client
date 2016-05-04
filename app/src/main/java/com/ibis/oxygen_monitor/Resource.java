@@ -8,5 +8,6 @@ import java.util.ArrayList;
  */
 public interface Resource {
     void deserializeJSON() throws FhirServerException;
-    ArrayList getValues(String extension);
+    ArrayList getValues();
+
 }

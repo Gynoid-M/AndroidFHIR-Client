@@ -20,7 +20,7 @@ public class ObservationResource implements Resource {
     private ArrayList<Integer> spo2 = new ArrayList<>();
 
     @Override
-    public ArrayList getValues(String extension){
+    public ArrayList getValues(){
         return spo2;
     }
     @Override
